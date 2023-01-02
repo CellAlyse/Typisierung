@@ -39,7 +39,7 @@ Bei der Zählung auf unseren Datensatz konnte eine Genauigkeit von ~98% erreicht
 
 ## Installation
 
-Für Windows
+Für Windows user
 ```bash
 git clone https://github.com/CellAlyse/CellAlyse
 cd CellAlyse
