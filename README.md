@@ -35,7 +35,7 @@ Bei der Zählung auf unseren Datensatz konnte eine Genauigkeit von ~98% erreicht
 ### Segmentierung
 | ![Segmentierung](images/results_on_few_test.gif) |
 | :---: |
-| *Segmentierungs Ergebnisse auf Testbildern* |
+| *Segmentierung auf Testbildern* |
 
 ## Installation
 
