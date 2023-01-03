@@ -61,18 +61,19 @@ def train(model_name="mse", epochs=50):
     # Check for existing weights
     if os.path.exists(f"models/{model_name}.h5"):
         model.load_weights(f"models/{model_name}.h5")
-
+    
+    # use batch gradient descent
     # fitting the model
     history = model.fit(
-        train_dataset.batch(16),
-        validation_data=test_dataset.batch(16),
+        train_dataset.batch(32),
+        validation_data=test_dataset.batch(32),
         epochs=epochs,
-        steps_per_epoch=125,
-        max_queue_size=16,
+        steps_per_epoch= 1024,
+        max_queue_size=64,
         use_multiprocessing=True,
         workers=8,
         verbose=1,
-        batch_size=16,
+        batch_size=32,
         callbacks=get_callbacks(model_name),
     )
 
@@ -616,4 +617,5 @@ if __name__ == "__main__":
     #     hough_transform('threshold_mask.png', image)
     # count('threshold_mask.png', image)
     # component_labeling('threshold_mask.png', image)
-    predict("Im037_0.jpg")
+    # predict("Im037_0.jpg")
+    predict_all_idb()
